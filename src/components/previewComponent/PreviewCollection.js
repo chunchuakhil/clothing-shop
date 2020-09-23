@@ -3,7 +3,7 @@ import CollectionItem from "./../collectionItem/CollectionItem";
 import "./PreviewCollection.scss";
 
 const PreviewCollection = (props) => {
-  console.log("PreviewCollection -> props", props);
+  // console.log("PreviewCollection -> props", props);
   return (
     <div className="collection-preview">
       <div className="title">title</div>

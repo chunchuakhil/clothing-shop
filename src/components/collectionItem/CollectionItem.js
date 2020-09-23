@@ -2,7 +2,7 @@ import React from "react";
 import "./CollectionItem.scss";
 
 const CollectionItem = (props) => {
-  console.log("CollectionItem -> props", props);
+  // console.log("CollectionItem -> props", props);
   return (
     <div className="collection-item">
       <div
