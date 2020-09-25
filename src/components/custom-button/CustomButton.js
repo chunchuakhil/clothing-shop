@@ -2,7 +2,7 @@ import React from "react";
 import "./CustomButton.scss";
 
 const CustomButton = (props) => {
-  console.log("CustomButton -> props", props);
+  // console.log("CustomButton -> props", props);
   return (
     <button
       //   className={`${props.isGoogleSignIn ? "google_button" : ""}custom_button`}
