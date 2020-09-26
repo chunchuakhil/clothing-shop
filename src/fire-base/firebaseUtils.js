@@ -22,6 +22,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!snapShot.exists) {
       //if user dont exists, create new user
       const { displayName, email } = userAuth;
+      console.log("createUserProfileDocument -> displayName", displayName);
       const createdAt = new Date();
       try {
         await userRef.set({
