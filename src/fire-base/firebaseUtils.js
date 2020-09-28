@@ -1,4 +1,5 @@
-import firebase from "firebase";
+// import firebase from "firebase";
+import * as firebase from "firebase/app";
 
 import "firebase/auth";
 import "firebase/firestore";
@@ -18,11 +19,9 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   else {
     const userRef = firestore.doc(`users/${userAuth.uid}`);
     const snapShot = await userRef.get();
-    console.log("createUserProfileDocument -> snapShot", snapShot, "////////");
     if (!snapShot.exists) {
       //if user dont exists, create new user
       const { displayName, email } = userAuth;
-      console.log("createUserProfileDocument -> displayName", displayName);
       const createdAt = new Date();
       try {
         await userRef.set({

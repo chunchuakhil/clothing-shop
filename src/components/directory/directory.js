@@ -3,7 +3,6 @@ import MenuItem from "../menu-item/menuItem";
 import "./directory.scss";
 export default class Directory extends React.Component {
   constructor(props) {
-    // console.log("Directory -> constructor -> props", props);
     super(props);
 
     this.state = {

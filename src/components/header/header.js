@@ -9,7 +9,6 @@ import CartIcon from "../cart-icon/cart-icon";
 import CartDropdown from "../cart-dropdown/cartDropdown";
 
 const Header = (props) => {
-  console.log("Header -> currentUser", props);
   return (
     <div className="header">
       <Link to="/" className="logo-container">
