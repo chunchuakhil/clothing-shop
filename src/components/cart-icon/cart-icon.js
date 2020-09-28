@@ -4,6 +4,7 @@ import "./cart-icon.scss";
 import { toggleCartHidden } from "./../../redux/cart/cart-actions";
 import { connect } from "react-redux";
 import { selectCartItemsCount } from "../../redux/cart/cart-selectors";
+import { createStructuredSelector } from "reselect";
 
 const CartIcon = (props) => {
   console.log("cartIcon is called");
@@ -22,14 +23,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
   };
 };
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = createStructuredSelector({
   //when *any state changes in the store, this is called.
   //if this value changes CartIcon will reRender, else not reRender
   //the calculations in this method needs to happen multiple times, without actual requirements
   //so we use Selectors concept to avoid complex unwanted calculations
-  return {
-    itemCount: selectCartItemsCount(state),
-  };
-};
+  itemCount: selectCartItemsCount,
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
