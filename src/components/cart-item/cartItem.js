@@ -1,7 +1,6 @@
 import React from "react";
 import "./cartItem.scss";
 const CartItem = (props) => {
-  console.log("CartItem -> props", props);
   return (
     <div className="cart=item">
       <img src={props.item.imageUrl} alt="item" />

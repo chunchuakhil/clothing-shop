@@ -9,7 +9,6 @@ import { connect } from "react-redux";
 import CheckOutItem from "../../components/checkout-item/checkout-item";
 
 const CheckOutPage = (props) => {
-  console.log("CheckOutPage -> props", props);
   return (
     <div className="checkout-page">
       <div className="checkout-header">
